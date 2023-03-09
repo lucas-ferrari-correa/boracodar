@@ -14,9 +14,43 @@ body {
 	gap: 16px;
 }
 
+#app {
+	max-width: 460px;
+	padding-inline: 40px;
+}
+
+h1 {
+	font-family: 'Inter';
+	color: white;
+	font-size: 32px;
+}
+
+p {
+	margin-top: 8px;
+	font-family: 'Roboto';
+	color: white;
+	opacity: 0.7;
+}
+
+.buttons {
+	margin-top: 100px;
+	display: grid;
+	gap: 32px;
+}
+
 .primary {
 	--bg-default: #8257E5;
 	--bg-hover: #9674E5;
+}
+
+.secondary {
+	--bg-default: #3C3748;
+	--bg-hover: #6A617F;
+}
+
+.tertiary {
+	--bg-default: transparent;
+	--bg-hover: transparent;
 }
 
 button {
@@ -33,6 +67,7 @@ button {
 
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	gap: 8px;
 }
 
@@ -45,12 +80,26 @@ button:focus {
 }
 
 button:disabled {
+	background-color: var(--bg-default);
 	opacity: 0.56;
+	cursor: not-allowed;
 }
 
 .loading {
+	cursor: progress
+}
+
+.loading i{
 	font-size: 16px;
 	animation: spin 700ms infinite linear;
+}
+
+.movable {
+	cursor: move;
+}
+
+.movable i {
+	font-size: 18px;
 }
 
 @keyframes spin {
